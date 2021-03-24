@@ -1,0 +1,9 @@
+<mat-card class="todo_item">
+    <h5><strong> Todo: </strong> {{todos.content}} </h5>
+    <!-- <h5> <strong> Complete:</strong> {{todos.complete ? '&#10003;' : '&#10005;'}}</h5> -->
+    <h3> <strong> Complete:</strong> {{todos.complete}}</h3>
+    <h5> <strong> Date:</strong> {{todos.date | date}} </h5>
+    <h5> <strong> ID:</strong> {{todos._id}} </h5>
+    <button (click)='handleDelete(todos._id)'>X</button>
+    <input type="checkbox" (click)="DataService.handleCompleteTodoById(todos._id, todos.complete)">
+</mat-card>

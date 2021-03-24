@@ -1,0 +1,6 @@
+<div class="form">
+  <form [formGroup]="todoForm" (ngSubmit)="handleAddTodo();todoForm.reset()">
+      <input type="text" formControlName='content'>
+      <button type="submit">Submit</button>
+  </form>
+</div>

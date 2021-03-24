@@ -1,0 +1,5 @@
+<div class="listWrapper">
+    <div class="list" *ngFor="let todos of DataService.todos">
+        <app-todoitem [todos]="todos" ></app-todoitem>
+    </div>
+</div>
